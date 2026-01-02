@@ -1,0 +1,24 @@
+name: Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main  # Trigger only when pushing to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to DigitalOcean via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /var/www/my-portfolio
+            git pull origin main
+            sudo systemctl restart nginx

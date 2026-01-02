@@ -1,0 +1,47 @@
+.animation {
+    font-size: 50px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #22d3ee;
+    color: #22d3ee;
+    animation: typing 4s steps(18) infinite, blink 0.6s infinite, text 16s infinite;
+}
+
+.animation::before {
+    content: "";
+    animation: text 16s infinite;
+}
+
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 530px;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes text {
+    0%,25%{
+        content: "A Frontend Engineer";
+    }
+    26%,50%{
+        content: "A Backend Engineer";
+    }
+    51%,75%{
+        content: "A Full Stack Web3 Developer";
+    }
+    76%,100%{
+        content: "A Software Engineer";
+    }
+}

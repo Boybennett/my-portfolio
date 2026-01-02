@@ -1,6 +1,6 @@
 # Variables for easy updates
 BINARY_NAME=portfolio
-GO_FILES=server.go
+GO_FILES=main.go
 
 # The 'all' target is usually the default
 all: build test
