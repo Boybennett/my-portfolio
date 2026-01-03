@@ -11,6 +11,9 @@ func main() {
 	staticServer := http.FileServer(http.Dir("./static"))
 	http.Handle("/static/", http.StripPrefix("/static/", staticServer))
 
+	publicServer := http.FileServer(http.Dir("./public"))
+	http.Handle("/public/", http.StripPrefix("/public/", publicServer))
+
 	// 2. The Home Page (Root)
 	// URL: localhost:8000/ -> File: ./public/dashboard.html
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
