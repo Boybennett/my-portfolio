@@ -22,3 +22,15 @@ clean:
 
 # .PHONY tells Make that these are commands, not actual files on disk
 .PHONY: all build run test clean
+
+add: 
+	git add .
+
+commit:
+	@read -p "Enter commit message: " msg; \
+	git commit -m "$$msg"
+
+push: 
+	git push origin main
+
+deploy: add commit push
