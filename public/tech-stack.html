@@ -1,6 +1,5 @@
 <!doctype html>
-
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,78 +11,89 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 min-h-screen flex flex-col">
 
     <header class="fixed top-0 left-0 w-full bg-gray-100 py-2 z-50 border-b-4 border-gray-300">
+        <div class="max-w-7xl mx-auto px-10 flex justify-between items-center">
 
-            <div class="max-w-7xl mx-auto px-10 flex justify-between items-center">
-    
-                <div class="flex items-center">
-                    <img class="h-10 w-10 rounded-full object-cover" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Logo">
-                </div>
-
-                <nav>
-                    <ul class="flex space-x-10 list-none font-medium">
-                        <li><a href="/dashboard" class="hover:text-cyan-500 transition">Home</a></li>
-                        <li><a href="/about" class="hover:text-cyan-500 transition">About Me</a></li>
-                        <li><a href="/projects" class="hover:text-cyan-500 transition">My Projects</a></li>
-                        <li><a href="/contact" class="hover:text-cyan-500 transition">Contact Me</a></li>
-                        <li><a href="/tech-stack" class="hover:text-cyan-500 transition">My Tech Stack</a></li>
-                    </ul>
-                </nav>
-
-                <div class="flex items-center space-x-8 text-2xl">
-                    <a href="https://github.com/BoyBennett" target="_blank" class="hover:text-gray-600"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://x.com/Bennett30_" target="_blank" class="hover:text-blue-400"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://wa.me/2348168084937" target="_blank" class="hover:text-green-500"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
-
+            <div class="flex items-center">
+                <img class="h-10 w-10 rounded-full object-cover" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Logo">
             </div>
 
-        </header>
+            <nav>
+                <ul class="flex space-x-10 list-none font-medium">
+                    <li><a href="/dashboard" class="hover:text-cyan-500 transition-colors">Home</a></li>
+                    <li><a href="/about" class="hover:text-cyan-500 transition-colors">About Me</a></li>
+                    <li><a href="/projects" class="hover:text-cyan-500 transition-colors">My Projects</a></li>
+                    <li><a href="/contact" class="hover:text-cyan-500 transition-colors">Contact Me</a></li>
+                    <li><a href="/tech-stack" class="text-cyan-500">My Tech Stack</a></li>
+                </ul>
+            </nav>
 
-    <section class="flex justify-center items-center">
-
-        <div class="grid grid-cols-3 gap-10 gap-x-20 p-40 text-[80px]">
-            <div>
-                <i class="devicon-html5-plain colored"></i> <!-- HTML -->
+            <div class="flex items-center space-x-8 text-2xl">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
 
-            <div>
-                <i class="devicon-css3-plain colored"></i> <!-- CSS/TAILWINDCSS -->
-            </div>
-
-            <div>
-                <i class="devicon-javascript-plain colored"></i> <!-- JAVASCRIPT -->
-            </div>
-
-            <div>
-                <i class="devicon-nodejs-plain colored"></i> <!-- NODEJS -->
-            </div>
-
-            <div>
-                <i class="devicon-go-original-wordmark colored"></i> <!-- GOLANG -->
-            </div>
-
-            <div>
-                <i class="devicon-solidity-plain colored"></i> <!-- SOLIDITY -->
-            </div>
-
-            <div>
-                <I class="devicon-docker-plain colored"></I> <!-- DOCKER -->
-            </div>
-
-            <div>
-                <i class="fa-brands fa-ethereum"></i> <!-- ETHEREUM (WAGMI/VIEM) -->
-            </div>
-            
         </div>
+    </header>
 
-    </section>
+    <main class="flex-1 flex flex-col items-center pt-24 pb-16 px-10">
 
-    <footer class="bottom-0 w-full bg-gray-100 py-4 z-50 border-t-5 border-gray-300">
-        <p class="pl-16 text-[22px]">2025 &copy; All Rights Reserved.</p>
+        <h2 class="text-4xl font-bold text-gray-800 mb-2">My Tech Stack</h2>
+        <div class="w-16 h-1 bg-cyan-400 mb-4 rounded-full"></div>
+        <p class="text-gray-600 text-lg mb-12">Technologies I work with</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 max-w-3xl w-full">
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="devicon-html5-plain colored text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">HTML5</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="devicon-css3-plain colored text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">CSS3 / Tailwind</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="devicon-javascript-plain colored text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">JavaScript</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="devicon-nodejs-plain colored text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">Node.js</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="devicon-go-original-wordmark colored text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">Go</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="devicon-solidity-plain colored text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">Solidity</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="devicon-docker-plain colored text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">Docker</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+                <i class="fa-brands fa-ethereum text-[52px] text-gray-700 group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-gray-700 text-sm">Wagmi / Viem</span>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w-full bg-gray-100 py-4 border-t-4 border-gray-300">
+        <p class="pl-16 text-lg text-gray-600">2026 &copy; All Rights Reserved.</p>
     </footer>
+
 </body>
 
 </html>
