@@ -67,7 +67,10 @@
         <div class="flex flex-col space-y-4 md:space-y-8 text-center md:text-left max-w-2xl md:ml-10">
             <div>
                 <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">Hello 👋, I'm Chukwuemeka</h1>
-                <h2 class="animation font-bold text-cyan-400 mb-4 md:mb-6"></h2>
+                <!-- flex wrapper centers on mobile, left-aligns on desktop -->
+                <div class="flex justify-center md:justify-start mb-4 md:mb-6">
+                    <h2 class="animation text-cyan-400"></h2>
+                </div>
                 <p class="mb-6 md:mb-10 text-base md:text-[22px] leading-relaxed text-gray-700">
                     I'm a highly motivated Software Engineer in the web2 and web3 space.
                     I build scalable software solutions and decentralized applications (dApps)

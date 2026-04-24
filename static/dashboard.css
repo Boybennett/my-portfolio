@@ -1,48 +1,36 @@
 .animation {
+    display: block;
     font-size: clamp(26px, 5vw, 50px);
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     border-right: 4px solid #22d3ee;
     color: #22d3ee;
-    max-width: min(530px, 90vw);
-    animation: typing 4s steps(18) infinite, blink 0.6s infinite, text 16s infinite;
+    text-align: left;
+    /* Locks in the line height so surrounding elements never shift */
+    min-height: 1.3em;
+    animation: typing 4s steps(27) infinite, blink 0.6s infinite, text 16s infinite;
 }
 
 .animation::before {
-    content: "";
+    /* Non-empty initial value — prevents a 0-height flash on load/loop */
+    content: "A Frontend Engineer";
     animation: text 16s infinite;
 }
 
 @keyframes typing {
-    0%{
-        width: 0;
-    }
-    50%{
-        width: min(530px, 90vw);
-    }
-    100%{
-        width: 0;
-    }
+    0%  { width: 0; }
+    50% { width: 100%; }
+    100%{ width: 0; }
 }
 
 @keyframes blink {
-    50%{
-        border-color: transparent;
-    }
+    50% { border-color: transparent; }
 }
 
 @keyframes text {
-    0%,25%{
-        content: "A Frontend Engineer";
-    }
-    26%,50%{
-        content: "A Backend Engineer";
-    }
-    51%,75%{
-        content: "A Full Stack Web3 Developer";
-    }
-    76%,100%{
-        content: "A Software Engineer";
-    }
+    0%,  25% { content: "A Frontend Engineer"; }
+    26%, 50% { content: "A Backend Engineer"; }
+    51%, 75% { content: "A Full Stack Web3 Developer"; }
+    76%,100% { content: "A Software Engineer"; }
 }
