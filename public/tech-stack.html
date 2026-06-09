@@ -4,118 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Tech Stack</title>
+    <title>Tech Stack — Chukwuemeka</title>
+    <link rel="stylesheet" href="../static/dashboard.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" href="../static/GOOD_PICTURE_GEMINI_2.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-slate-900 min-h-screen flex flex-col text-slate-50">
 
-    <header class="fixed top-0 left-0 w-full bg-gray-100 z-50 border-b-4 border-gray-300">
-        <div class="max-w-7xl mx-auto px-6 md:px-10 py-2 flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-3 flex justify-between items-center">
 
             <div class="flex items-center flex-shrink-0">
-                <img class="h-10 w-10 rounded-full object-cover" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Logo">
+                <img class="h-9 w-9 rounded-full object-cover ring-2 ring-cyan-500/40" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Chukwuemeka">
             </div>
 
-            <!-- Desktop nav -->
             <nav class="hidden md:block">
-                <ul class="flex space-x-10 list-none font-medium">
-                    <li><a href="/dashboard" class="hover:text-cyan-500 transition-colors">Home</a></li>
-                    <li><a href="/about" class="hover:text-cyan-500 transition-colors">About Me</a></li>
-                    <li><a href="/projects" class="hover:text-cyan-500 transition-colors">My Projects</a></li>
-                    <li><a href="/contact" class="hover:text-cyan-500 transition-colors">Contact Me</a></li>
-                    <li><a href="/tech-stack" class="text-cyan-500">My Tech Stack</a></li>
+                <ul class="flex space-x-8 list-none font-medium text-sm tracking-wide">
+                    <li><a href="/dashboard" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Home</a></li>
+                    <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">About</a></li>
+                    <li><a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Projects</a></li>
+                    <li><a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Contact</a></li>
+                    <li><a href="/tech-stack" class="text-cyan-400 font-semibold">Tech Stack</a></li>
                 </ul>
             </nav>
 
-            <!-- Desktop social icons -->
-            <div class="hidden md:flex items-center space-x-8 text-2xl">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="hidden md:flex items-center space-x-5 text-lg">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact" class="text-slate-500 hover:text-green-400 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
 
-            <!-- Mobile hamburger button -->
-            <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 hover:text-cyan-500 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+            <button id="menu-toggle" class="md:hidden text-xl text-slate-400 hover:text-cyan-400 transition-colors focus:outline-none cursor-pointer" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
-
         </div>
 
-        <!-- Mobile dropdown menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t-2 border-gray-300 px-6 py-5">
-            <ul class="flex flex-col space-y-4 font-medium mb-5">
-                <li><a href="/dashboard" class="hover:text-cyan-500 transition-colors block">Home</a></li>
-                <li><a href="/about" class="hover:text-cyan-500 transition-colors block">About Me</a></li>
-                <li><a href="/projects" class="hover:text-cyan-500 transition-colors block">My Projects</a></li>
-                <li><a href="/contact" class="hover:text-cyan-500 transition-colors block">Contact Me</a></li>
-                <li><a href="/tech-stack" class="text-cyan-500 block">My Tech Stack</a></li>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 px-6 py-5">
+            <ul class="flex flex-col space-y-4 font-medium text-sm mb-5">
+                <li><a href="/dashboard" class="text-slate-400 hover:text-cyan-400 transition-colors block">Home</a></li>
+                <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors block">About</a></li>
+                <li><a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors block">Projects</a></li>
+                <li><a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors block">Contact</a></li>
+                <li><a href="/tech-stack" class="text-cyan-400 block">Tech Stack</a></li>
             </ul>
-            <div class="flex items-center space-x-6 text-2xl border-t border-gray-300 pt-4">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="flex items-center space-x-5 text-lg border-t border-slate-700/50 pt-4">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-slate-500 hover:text-green-400 transition-colors cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </header>
 
-    <main class="flex-1 flex flex-col items-center pt-24 pb-16 px-4 md:px-10">
+    <main class="flex-1 flex flex-col items-center pt-28 pb-16 px-4 sm:px-6 md:px-10">
 
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">My Tech Stack</h2>
-        <div class="w-16 h-1 bg-cyan-400 mb-4 rounded-full"></div>
-        <p class="text-gray-600 text-base md:text-lg mb-10 md:mb-12">Technologies I work with</p>
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-50 mb-3" style="font-family: 'Orbitron', sans-serif;">My Tech Stack</h2>
+            <div class="w-12 h-0.5 bg-cyan-500 mx-auto rounded-full mb-4"></div>
+            <p class="text-slate-500 text-sm md:text-base">Technologies I work with</p>
+        </div>
 
-        <!-- 2 cols on mobile, 3 on sm, 4 on md+ -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 max-w-3xl w-full">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-5 max-w-3xl w-full">
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group cursor-default">
                 <i class="devicon-html5-plain colored text-[44px] md:text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">HTML5</span>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">HTML5</span>
             </div>
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group cursor-default">
                 <i class="devicon-css3-plain colored text-[44px] md:text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">CSS3 / Tailwind</span>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">CSS3 / Tailwind</span>
             </div>
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group cursor-default">
                 <i class="devicon-javascript-plain colored text-[44px] md:text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">JavaScript</span>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">JavaScript</span>
             </div>
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group cursor-default">
                 <i class="devicon-nodejs-plain colored text-[44px] md:text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">Node.js</span>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">Node.js</span>
             </div>
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group cursor-default">
                 <i class="devicon-go-original-wordmark colored text-[44px] md:text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">Go</span>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">Go</span>
             </div>
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/5 transition-all duration-300 group cursor-default">
                 <i class="devicon-solidity-plain colored text-[44px] md:text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">Solidity</span>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">Solidity</span>
             </div>
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/5 transition-all duration-300 group cursor-default">
                 <i class="devicon-docker-plain colored text-[44px] md:text-[52px] group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">Docker</span>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">Docker</span>
             </div>
 
-            <div class="flex flex-col items-center gap-3 p-4 md:p-6 bg-gray-200 border-2 border-gray-300 rounded-2xl hover:border-cyan-400 hover:shadow-md transition-all duration-300 group cursor-default">
-                <i class="fa-brands fa-ethereum text-[44px] md:text-[52px] text-gray-700 group-hover:scale-110 transition-transform duration-300"></i>
-                <span class="font-medium text-gray-700 text-xs md:text-sm">Wagmi / Viem</span>
+            <div class="flex flex-col items-center gap-3 p-5 md:p-6 bg-slate-800/60 border border-slate-700 rounded-2xl hover:border-purple-500/40 hover:shadow-lg hover:shadow-purple-500/5 transition-all duration-300 group cursor-default">
+                <i class="fa-brands fa-ethereum text-[44px] md:text-[52px] text-purple-400 group-hover:scale-110 transition-transform duration-300"></i>
+                <span class="font-medium text-slate-400 group-hover:text-slate-200 text-xs md:text-sm transition-colors duration-200">Wagmi / Viem</span>
             </div>
 
         </div>
     </main>
 
-    <footer class="w-full bg-gray-100 py-4 border-t-4 border-gray-300">
-        <p class="pl-4 md:pl-16 text-lg text-gray-600">2026 &copy; All Rights Reserved.</p>
+    <footer class="w-full py-5 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-2">
+            <p class="text-slate-600 text-sm">2026 &copy; Chukwuemeka Ejikeme. All Rights Reserved.</p>
+            <p class="text-slate-700 text-xs">Built with Go &amp; Tailwind CSS</p>
+        </div>
     </footer>
 
     <script>

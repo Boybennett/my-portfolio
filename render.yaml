@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: portfolio
+    runtime: go
+    plan: free
+    buildCommand: go build -o portfolio_bin .
+    startCommand: ./portfolio_bin

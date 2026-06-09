@@ -4,103 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chukwuemeka's Portfolio</title>
+    <title>Chukwuemeka — Software Engineer</title>
     <link rel="stylesheet" href="../static/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" href="../static/GOOD_PICTURE_GEMINI_2.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-slate-900 min-h-screen flex flex-col text-slate-50">
 
-    <header class="fixed top-0 left-0 w-full bg-gray-100 z-50 border-b-4 border-gray-300">
-        <div class="max-w-7xl mx-auto px-6 md:px-10 py-2 flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-3 flex justify-between items-center">
 
             <div class="flex items-center flex-shrink-0">
-                <img class="h-10 w-10 rounded-full object-cover" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Logo">
+                <img class="h-9 w-9 rounded-full object-cover ring-2 ring-cyan-500/40" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Chukwuemeka">
             </div>
 
-            <!-- Desktop nav -->
             <nav class="hidden md:block">
-                <ul class="flex space-x-10 list-none font-medium">
-                    <li><a href="/dashboard" class="text-cyan-500">Home</a></li>
-                    <li><a href="/about" class="hover:text-cyan-500 transition-colors">About Me</a></li>
-                    <li><a href="/projects" class="hover:text-cyan-500 transition-colors">My Projects</a></li>
-                    <li><a href="/contact" class="hover:text-cyan-500 transition-colors">Contact Me</a></li>
-                    <li><a href="/tech-stack" class="hover:text-cyan-500 transition-colors">My Tech Stack</a></li>
+                <ul class="flex space-x-8 list-none font-medium text-sm tracking-wide">
+                    <li><a href="/dashboard" class="text-cyan-400 font-semibold">Home</a></li>
+                    <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">About</a></li>
+                    <li><a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Projects</a></li>
+                    <li><a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Contact</a></li>
+                    <li><a href="/tech-stack" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Tech Stack</a></li>
                 </ul>
             </nav>
 
-            <!-- Desktop social icons -->
-            <div class="hidden md:flex items-center space-x-8 text-2xl">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="hidden md:flex items-center space-x-5 text-lg">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact" class="text-slate-500 hover:text-green-400 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
 
-            <!-- Mobile hamburger button -->
-            <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 hover:text-cyan-500 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+            <button id="menu-toggle" class="md:hidden text-xl text-slate-400 hover:text-cyan-400 transition-colors focus:outline-none cursor-pointer" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
-
         </div>
 
-        <!-- Mobile dropdown menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t-2 border-gray-300 px-6 py-5">
-            <ul class="flex flex-col space-y-4 font-medium mb-5">
-                <li><a href="/dashboard" class="text-cyan-500 block">Home</a></li>
-                <li><a href="/about" class="hover:text-cyan-500 transition-colors block">About Me</a></li>
-                <li><a href="/projects" class="hover:text-cyan-500 transition-colors block">My Projects</a></li>
-                <li><a href="/contact" class="hover:text-cyan-500 transition-colors block">Contact Me</a></li>
-                <li><a href="/tech-stack" class="hover:text-cyan-500 transition-colors block">My Tech Stack</a></li>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 px-6 py-5">
+            <ul class="flex flex-col space-y-4 font-medium text-sm mb-5">
+                <li><a href="/dashboard" class="text-cyan-400 block">Home</a></li>
+                <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors block">About</a></li>
+                <li><a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors block">Projects</a></li>
+                <li><a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors block">Contact</a></li>
+                <li><a href="/tech-stack" class="text-slate-400 hover:text-cyan-400 transition-colors block">Tech Stack</a></li>
             </ul>
-            <div class="flex items-center space-x-6 text-2xl border-t border-gray-300 pt-4">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="flex items-center space-x-5 text-lg border-t border-slate-700/50 pt-4">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-slate-500 hover:text-green-400 transition-colors cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </header>
 
-    <section class="flex-1 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto w-full px-6 md:px-10 pt-28 pb-16 gap-10 md:gap-0">
+    <section class="flex-1 flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-10 pt-32 pb-16 gap-12 md:gap-0">
 
-        <div class="flex flex-col space-y-4 md:space-y-8 text-center md:text-left max-w-2xl md:ml-10">
+        <div class="flex flex-col space-y-6 text-center md:text-left max-w-2xl md:ml-10">
+
+            <div class="flex justify-center md:justify-start">
+                <span class="inline-flex items-center gap-2 px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-xs font-medium tracking-widest uppercase">
+                    <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                    Available for work
+                </span>
+            </div>
+
             <div>
-                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">Hello 👋, I'm Chukwuemeka</h1>
-                <!-- flex wrapper centers on mobile, left-aligns on desktop -->
-                <div class="flex justify-center md:justify-start mb-4 md:mb-6">
-                    <h2 class="animation text-cyan-400"></h2>
+                <p class="text-slate-500 text-sm font-medium tracking-[0.2em] uppercase mb-2">Hello, I'm</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-slate-50 mb-5 leading-tight" style="font-family: 'Orbitron', sans-serif; text-shadow: 0 0 40px rgba(6,182,212,0.15);">Chukwuemeka</h1>
+                <div class="flex justify-center md:justify-start mb-6">
+                    <h2 class="animation"></h2>
                 </div>
-                <p class="mb-6 md:mb-10 text-base md:text-[22px] leading-relaxed text-gray-700">
-                    I'm a highly motivated Software Engineer in the web2 and web3 space.
-                    I build scalable software solutions and decentralized applications (dApps)
-                    that solve everyday problems.
+                <p class="mb-8 text-base md:text-lg leading-relaxed text-slate-400 max-w-xl">
+                    A highly motivated Software Engineer in the web2 and web3 space. I build scalable software solutions and decentralized applications (dApps) that solve everyday problems.
                 </p>
 
-                <div class="flex justify-center md:justify-start space-x-4">
-                    <a href="#" class="flex items-center bg-cyan-500 hover:bg-cyan-600 text-white px-5 md:px-6 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg">
-                        View Resume <i class="fa-solid fa-eye ml-2 text-sm"></i>
+                <div class="flex justify-center md:justify-start gap-3 flex-wrap">
+                    <a href="#" class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-cyan-500/30 cursor-pointer">
+                        <i class="fa-solid fa-eye text-sm"></i> View Resume
                     </a>
                     <a href="mailto:benejikeme01@gmail.com?subject=Application%20to%20collaborate%20with%20you%20as%20Software%20Engineer"
                        target="_blank" rel="noopener noreferrer"
-                       class="flex items-center bg-cyan-600 hover:bg-cyan-500 text-white px-5 md:px-6 py-3 rounded-lg font-semibold transition duration-300 shadow-md hover:shadow-lg">
-                        <i class="fa-solid fa-envelope mr-2"></i> Mail
+                       class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 hover:border-cyan-500/40 font-semibold px-6 py-3 rounded-lg transition-all duration-200 cursor-pointer">
+                        <i class="fa-solid fa-envelope text-sm"></i> Send Email
                     </a>
                 </div>
             </div>
         </div>
 
         <div class="flex relative flex-shrink-0 md:mr-10">
-            <div class="absolute inset-0 bg-cyan-200 rounded-full blur-2xl opacity-50 scale-110"></div>
-            <img class="relative h-56 w-56 md:h-100 md:w-100 rounded-full object-cover border-8 border-white shadow-xl transition-transform duration-500 hover:scale-110"
+            <div class="absolute inset-0 bg-cyan-500/15 rounded-full blur-3xl scale-125"></div>
+            <img class="relative h-56 w-56 md:h-96 md:w-96 rounded-full object-cover ring-4 ring-slate-700 hover:ring-cyan-500/40 shadow-2xl transition-all duration-500 hover:scale-105"
                  src="../static/GOOD_PICTURE_GEMINI_2.png"
-                 alt="Chukwuemeka">
+                 alt="Chukwuemeka Ejikeme — Software Engineer">
         </div>
 
     </section>
 
-    <footer class="w-full bg-gray-100 py-4 border-t-4 border-gray-300">
-        <p class="pl-4 md:pl-16 text-lg text-gray-600">2026 &copy; All Rights Reserved.</p>
+    <footer class="w-full py-5 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-2">
+            <p class="text-slate-600 text-sm">2026 &copy; Chukwuemeka Ejikeme. All Rights Reserved.</p>
+            <p class="text-slate-700 text-xs">Built with Go &amp; Tailwind CSS</p>
+        </div>
     </footer>
 
     <script>
@@ -115,5 +119,4 @@
     </script>
 
 </body>
-
 </html>

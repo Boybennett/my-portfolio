@@ -4,165 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Projects</title>
+    <title>Projects — Chukwuemeka</title>
+    <link rel="stylesheet" href="../static/dashboard.css">
     <link rel="icon" href="../static/GOOD_PICTURE_GEMINI_2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-slate-900 min-h-screen flex flex-col text-slate-50">
 
-    <header class="fixed top-0 left-0 w-full bg-gray-100 z-50 border-b-4 border-gray-300">
-        <div class="max-w-7xl mx-auto px-6 md:px-10 py-2 flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-3 flex justify-between items-center">
 
             <div class="flex items-center flex-shrink-0">
-                <img class="h-10 w-10 rounded-full object-cover" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Logo">
+                <img class="h-9 w-9 rounded-full object-cover ring-2 ring-cyan-500/40" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Chukwuemeka">
             </div>
 
-            <!-- Desktop nav -->
             <nav class="hidden md:block">
-                <ul class="flex space-x-10 list-none font-medium">
-                    <li><a href="/dashboard" class="hover:text-cyan-500 transition-colors">Home</a></li>
-                    <li><a href="/about" class="hover:text-cyan-500 transition-colors">About Me</a></li>
-                    <li><a href="/projects" class="text-cyan-500">My Projects</a></li>
-                    <li><a href="/contact" class="hover:text-cyan-500 transition-colors">Contact Me</a></li>
-                    <li><a href="/tech-stack" class="hover:text-cyan-500 transition-colors">My Tech Stack</a></li>
+                <ul class="flex space-x-8 list-none font-medium text-sm tracking-wide">
+                    <li><a href="/dashboard" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Home</a></li>
+                    <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">About</a></li>
+                    <li><a href="/projects" class="text-cyan-400 font-semibold">Projects</a></li>
+                    <li><a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Contact</a></li>
+                    <li><a href="/tech-stack" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Tech Stack</a></li>
                 </ul>
             </nav>
 
-            <!-- Desktop social icons -->
-            <div class="hidden md:flex items-center space-x-8 text-2xl">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="hidden md:flex items-center space-x-5 text-lg">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact" class="text-slate-500 hover:text-green-400 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
 
-            <!-- Mobile hamburger button -->
-            <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 hover:text-cyan-500 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+            <button id="menu-toggle" class="md:hidden text-xl text-slate-400 hover:text-cyan-400 transition-colors focus:outline-none cursor-pointer" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
-
         </div>
 
-        <!-- Mobile dropdown menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t-2 border-gray-300 px-6 py-5">
-            <ul class="flex flex-col space-y-4 font-medium mb-5">
-                <li><a href="/dashboard" class="hover:text-cyan-500 transition-colors block">Home</a></li>
-                <li><a href="/about" class="hover:text-cyan-500 transition-colors block">About Me</a></li>
-                <li><a href="/projects" class="text-cyan-500 block">My Projects</a></li>
-                <li><a href="/contact" class="hover:text-cyan-500 transition-colors block">Contact Me</a></li>
-                <li><a href="/tech-stack" class="hover:text-cyan-500 transition-colors block">My Tech Stack</a></li>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 px-6 py-5">
+            <ul class="flex flex-col space-y-4 font-medium text-sm mb-5">
+                <li><a href="/dashboard" class="text-slate-400 hover:text-cyan-400 transition-colors block">Home</a></li>
+                <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors block">About</a></li>
+                <li><a href="/projects" class="text-cyan-400 block">Projects</a></li>
+                <li><a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors block">Contact</a></li>
+                <li><a href="/tech-stack" class="text-slate-400 hover:text-cyan-400 transition-colors block">Tech Stack</a></li>
             </ul>
-            <div class="flex items-center space-x-6 text-2xl border-t border-gray-300 pt-4">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="flex items-center space-x-5 text-lg border-t border-slate-700/50 pt-4">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-slate-500 hover:text-green-400 transition-colors cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </header>
 
-    <main class="flex-1 pt-24 pb-16 px-4 md:px-10 max-w-7xl mx-auto w-full">
+    <main class="flex-1 pt-28 pb-16 px-4 sm:px-6 md:px-10 max-w-7xl mx-auto w-full">
 
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">My Projects</h2>
-        <div class="w-16 h-1 bg-cyan-400 mb-10 rounded-full"></div>
+        <div class="mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-50 mb-3" style="font-family: 'Orbitron', sans-serif;">My Projects</h2>
+            <div class="w-12 h-0.5 bg-cyan-500 rounded-full"></div>
+        </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
 
             <!-- Portfolio Website -->
-            <div class="bg-gray-200 border-2 border-gray-300 rounded-2xl p-6 flex flex-col hover:shadow-lg hover:border-cyan-400 transition-all duration-300">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-briefcase text-white"></i>
+            <div class="bg-slate-800/60 border border-slate-700 rounded-2xl overflow-hidden flex flex-col hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-500/5 transition-all duration-300 group">
+                <div class="h-1 bg-gradient-to-r from-cyan-500 to-cyan-400"></div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-cyan-500/10 border border-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-briefcase text-cyan-400 text-sm"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-100" style="font-family: 'Orbitron', sans-serif; letter-spacing: 0;">Portfolio Website</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Portfolio Website</h3>
+                    <p class="text-slate-500 text-sm flex-1 mb-4 leading-relaxed">
+                        A personal portfolio website built with Go for the backend and Tailwind CSS for the frontend. Showcases skills, projects, and contact info.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Go</span>
+                        <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                        <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">HTML</span>
+                        <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Docker</span>
+                    </div>
+                    <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-100 text-sm font-medium transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
                 </div>
-                <p class="text-gray-600 text-sm flex-1 mb-4 leading-relaxed">
-                    A personal portfolio website built with Go for the backend and Tailwind CSS for the frontend. Showcases my skills, projects, and contact info.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                    <span class="bg-cyan-100 text-cyan-700 text-xs font-medium px-2.5 py-1 rounded-full">Go</span>
-                    <span class="bg-cyan-100 text-cyan-700 text-xs font-medium px-2.5 py-1 rounded-full">Tailwind CSS</span>
-                    <span class="bg-cyan-100 text-cyan-700 text-xs font-medium px-2.5 py-1 rounded-full">HTML</span>
-                    <span class="bg-cyan-100 text-cyan-700 text-xs font-medium px-2.5 py-1 rounded-full">Docker</span>
-                </div>
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
-                    <i class="fa-brands fa-github"></i> View on GitHub
-                </a>
             </div>
 
             <!-- Smart Contract Suite -->
-            <div class="bg-gray-200 border-2 border-gray-300 rounded-2xl p-6 flex flex-col hover:shadow-lg hover:border-cyan-400 transition-all duration-300">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-brands fa-ethereum text-white"></i>
+            <div class="bg-slate-800/60 border border-slate-700 rounded-2xl overflow-hidden flex flex-col hover:border-purple-500/40 hover:shadow-xl hover:shadow-purple-500/5 transition-all duration-300 group">
+                <div class="h-1 bg-gradient-to-r from-purple-500 to-violet-400"></div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-purple-500/10 border border-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-brands fa-ethereum text-purple-400 text-sm"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-100" style="font-family: 'Orbitron', sans-serif; letter-spacing: 0;">Smart Contract Suite</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Smart Contract Suite</h3>
+                    <p class="text-slate-500 text-sm flex-1 mb-4 leading-relaxed">
+                        A collection of Solidity smart contracts deployed on the Ethereum blockchain, with a frontend integration built using Viem and Wagmi.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Solidity</span>
+                        <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Viem</span>
+                        <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Wagmi</span>
+                        <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">JavaScript</span>
+                    </div>
+                    <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-100 text-sm font-medium transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
                 </div>
-                <p class="text-gray-600 text-sm flex-1 mb-4 leading-relaxed">
-                    A collection of Solidity smart contracts deployed on the Ethereum blockchain, with a frontend integration built using Viem and Wagmi.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                    <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-1 rounded-full">Solidity</span>
-                    <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-1 rounded-full">Viem</span>
-                    <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-1 rounded-full">Wagmi</span>
-                    <span class="bg-purple-100 text-purple-700 text-xs font-medium px-2.5 py-1 rounded-full">JavaScript</span>
-                </div>
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
-                    <i class="fa-brands fa-github"></i> View on GitHub
-                </a>
             </div>
 
             <!-- Go REST API -->
-            <div class="bg-gray-200 border-2 border-gray-300 rounded-2xl p-6 flex flex-col hover:shadow-lg hover:border-cyan-400 transition-all duration-300">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-server text-white"></i>
+            <div class="bg-slate-800/60 border border-slate-700 rounded-2xl overflow-hidden flex flex-col hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5 transition-all duration-300 group">
+                <div class="h-1 bg-gradient-to-r from-emerald-500 to-green-400"></div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-server text-emerald-400 text-sm"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-100" style="font-family: 'Orbitron', sans-serif; letter-spacing: 0;">Go REST API</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Go REST API</h3>
+                    <p class="text-slate-500 text-sm flex-1 mb-4 leading-relaxed">
+                        A high-performance RESTful API built with Go, containerized with Docker. Features clean architecture and efficient request handling.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Go</span>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Docker</span>
+                        <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">REST API</span>
+                    </div>
+                    <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-100 text-sm font-medium transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
                 </div>
-                <p class="text-gray-600 text-sm flex-1 mb-4 leading-relaxed">
-                    A high-performance RESTful API built with Go, containerized with Docker. Features clean architecture and efficient request handling.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                    <span class="bg-green-100 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">Go</span>
-                    <span class="bg-green-100 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">Docker</span>
-                    <span class="bg-green-100 text-green-700 text-xs font-medium px-2.5 py-1 rounded-full">REST API</span>
-                </div>
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
-                    <i class="fa-brands fa-github"></i> View on GitHub
-                </a>
             </div>
 
             <!-- Node.js Web App -->
-            <div class="bg-gray-200 border-2 border-gray-300 rounded-2xl p-6 flex flex-col hover:shadow-lg hover:border-cyan-400 transition-all duration-300">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-brands fa-node-js text-white"></i>
+            <div class="bg-slate-800/60 border border-slate-700 rounded-2xl overflow-hidden flex flex-col hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/5 transition-all duration-300 group">
+                <div class="h-1 bg-gradient-to-r from-amber-500 to-yellow-400"></div>
+                <div class="p-6 flex flex-col flex-1">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-amber-500/10 border border-amber-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <i class="fa-brands fa-node-js text-amber-400 text-sm"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-slate-100" style="font-family: 'Orbitron', sans-serif; letter-spacing: 0;">Node.js Web App</h3>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800">Node.js Web App</h3>
+                    <p class="text-slate-500 text-sm flex-1 mb-4 leading-relaxed">
+                        A full-stack web application built with Node.js on the backend and vanilla JavaScript on the frontend, featuring user authentication and real-time updates.
+                    </p>
+                    <div class="flex flex-wrap gap-1.5 mb-5">
+                        <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">Node.js</span>
+                        <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">JavaScript</span>
+                        <span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-medium px-2.5 py-0.5 rounded-full">HTML / CSS</span>
+                    </div>
+                    <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 text-slate-500 hover:text-slate-100 text-sm font-medium transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
                 </div>
-                <p class="text-gray-600 text-sm flex-1 mb-4 leading-relaxed">
-                    A full-stack web application built with Node.js on the backend and vanilla JavaScript on the frontend, featuring user authentication and real-time updates.
-                </p>
-                <div class="flex flex-wrap gap-2 mb-5">
-                    <span class="bg-yellow-100 text-yellow-700 text-xs font-medium px-2.5 py-1 rounded-full">Node.js</span>
-                    <span class="bg-yellow-100 text-yellow-700 text-xs font-medium px-2.5 py-1 rounded-full">JavaScript</span>
-                    <span class="bg-yellow-100 text-yellow-700 text-xs font-medium px-2.5 py-1 rounded-full">HTML / CSS</span>
-                </div>
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-2 text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors">
-                    <i class="fa-brands fa-github"></i> View on GitHub
-                </a>
             </div>
 
         </div>
     </main>
 
-    <footer class="w-full bg-gray-100 py-4 border-t-4 border-gray-300">
-        <p class="pl-4 md:pl-16 text-lg text-gray-600">2026 &copy; All Rights Reserved.</p>
+    <footer class="w-full py-5 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-2">
+            <p class="text-slate-600 text-sm">2026 &copy; Chukwuemeka Ejikeme. All Rights Reserved.</p>
+            <p class="text-slate-700 text-xs">Built with Go &amp; Tailwind CSS</p>
+        </div>
     </footer>
 
     <script>

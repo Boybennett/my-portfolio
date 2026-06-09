@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -50,11 +51,13 @@ func main() {
 		http.ServeFile(w, r, "./public/tech-stack.html")
 	})
 
-	fmt.Println("Server starting on http://localhost:8000")
-	fmt.Println("Dashboard: http://localhost:8000/")
-	fmt.Println("About:     http://localhost:8000/about")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8000"
+	}
 
-	if err := http.ListenAndServe(":8000", nil); err != nil {
+	fmt.Printf("Server starting on http://localhost:%s\n", port)
+	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		fmt.Printf("Error starting server: %v\n", err)
 	}
 }

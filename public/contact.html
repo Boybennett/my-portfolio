@@ -4,106 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me</title>
+    <title>Contact — Chukwuemeka</title>
+    <link rel="stylesheet" href="../static/dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="icon" href="../static/GOOD_PICTURE_GEMINI_2.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-slate-900 min-h-screen flex flex-col text-slate-50">
 
-    <header class="fixed top-0 left-0 w-full bg-gray-100 z-50 border-b-4 border-gray-300">
-        <div class="max-w-7xl mx-auto px-6 md:px-10 py-2 flex justify-between items-center">
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-3 flex justify-between items-center">
 
             <div class="flex items-center flex-shrink-0">
-                <img class="h-10 w-10 rounded-full object-cover" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Logo">
+                <img class="h-9 w-9 rounded-full object-cover ring-2 ring-cyan-500/40" src="../static/GOOD_PICTURE_GEMINI_2.png" alt="Chukwuemeka">
             </div>
 
-            <!-- Desktop nav -->
             <nav class="hidden md:block">
-                <ul class="flex space-x-10 list-none font-medium">
-                    <li><a href="/dashboard" class="hover:text-cyan-500 transition-colors">Home</a></li>
-                    <li><a href="/about" class="hover:text-cyan-500 transition-colors">About Me</a></li>
-                    <li><a href="/projects" class="hover:text-cyan-500 transition-colors">My Projects</a></li>
-                    <li><a href="/contact" class="text-cyan-500">Contact Me</a></li>
-                    <li><a href="/tech-stack" class="hover:text-cyan-500 transition-colors">My Tech Stack</a></li>
+                <ul class="flex space-x-8 list-none font-medium text-sm tracking-wide">
+                    <li><a href="/dashboard" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Home</a></li>
+                    <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">About</a></li>
+                    <li><a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Projects</a></li>
+                    <li><a href="/contact" class="text-cyan-400 font-semibold">Contact</a></li>
+                    <li><a href="/tech-stack" class="text-slate-400 hover:text-cyan-400 transition-colors duration-200">Tech Stack</a></li>
                 </ul>
             </nav>
 
-            <!-- Desktop social icons -->
-            <div class="hidden md:flex items-center space-x-8 text-2xl">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="hidden md:flex items-center space-x-5 text-lg">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X profile" class="text-slate-500 hover:text-slate-50 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp contact" class="text-slate-500 hover:text-green-400 transition-colors duration-200 cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
 
-            <!-- Mobile hamburger button -->
-            <button id="menu-toggle" class="md:hidden text-2xl text-gray-700 hover:text-cyan-500 transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+            <button id="menu-toggle" class="md:hidden text-xl text-slate-400 hover:text-cyan-400 transition-colors focus:outline-none cursor-pointer" aria-label="Toggle navigation menu">
                 <i class="fa-solid fa-bars" id="menu-icon"></i>
             </button>
-
         </div>
 
-        <!-- Mobile dropdown menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t-2 border-gray-300 px-6 py-5">
-            <ul class="flex flex-col space-y-4 font-medium mb-5">
-                <li><a href="/dashboard" class="hover:text-cyan-500 transition-colors block">Home</a></li>
-                <li><a href="/about" class="hover:text-cyan-500 transition-colors block">About Me</a></li>
-                <li><a href="/projects" class="hover:text-cyan-500 transition-colors block">My Projects</a></li>
-                <li><a href="/contact" class="text-cyan-500 block">Contact Me</a></li>
-                <li><a href="/tech-stack" class="hover:text-cyan-500 transition-colors block">My Tech Stack</a></li>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50 px-6 py-5">
+            <ul class="flex flex-col space-y-4 font-medium text-sm mb-5">
+                <li><a href="/dashboard" class="text-slate-400 hover:text-cyan-400 transition-colors block">Home</a></li>
+                <li><a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors block">About</a></li>
+                <li><a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors block">Projects</a></li>
+                <li><a href="/contact" class="text-cyan-400 block">Contact</a></li>
+                <li><a href="/tech-stack" class="text-slate-400 hover:text-cyan-400 transition-colors block">Tech Stack</a></li>
             </ul>
-            <div class="flex items-center space-x-6 text-2xl border-t border-gray-300 pt-4">
-                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" class="hover:text-gray-600 transition-colors"><i class="fa-brands fa-github"></i></a>
-                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+            <div class="flex items-center space-x-5 text-lg border-t border-slate-700/50 pt-4">
+                <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" class="text-slate-500 hover:text-slate-50 transition-colors cursor-pointer"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="text-slate-500 hover:text-green-400 transition-colors cursor-pointer"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </header>
 
-    <main class="flex-1 flex items-center justify-center pt-24 pb-16 px-4 md:px-6">
-        <div class="max-w-2xl w-full">
+    <main class="flex-1 flex items-center justify-center pt-28 pb-16 px-4 sm:px-6">
+        <div class="max-w-lg w-full">
 
-            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-2">Contact Me</h2>
-            <div class="w-16 h-1 bg-cyan-400 mx-auto mb-4 rounded-full"></div>
-            <p class="text-center text-gray-600 mb-8 md:mb-10 text-base md:text-lg">Let's connect! Reach out through any of the platforms below.</p>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-50 mb-3" style="font-family: 'Orbitron', sans-serif;">Contact Me</h2>
+                <div class="w-12 h-0.5 bg-cyan-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-500 text-sm md:text-base">Let's connect. Reach out through any of the platforms below.</p>
+            </div>
 
-            <!-- Stacks to 1 col on mobile, 2 cols on sm+ -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 
                 <a href="https://github.com/BoyBennett" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-4 bg-gray-200 border-2 border-gray-300 rounded-2xl p-5 hover:bg-gray-800 hover:text-white hover:border-gray-800 transition-all duration-300 group shadow-sm hover:shadow-md">
-                    <i class="fa-brands fa-github text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                   class="flex items-center gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4 hover:bg-slate-800 hover:border-slate-500 transition-all duration-200 group cursor-pointer">
+                    <div class="w-10 h-10 bg-slate-700 group-hover:bg-slate-600 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-200">
+                        <i class="fa-brands fa-github text-slate-300 text-lg"></i>
+                    </div>
                     <div>
-                        <p class="font-semibold">GitHub</p>
-                        <p class="text-sm text-gray-500 group-hover:text-gray-300 transition-colors">@BoyBennett</p>
+                        <p class="font-semibold text-slate-200 text-sm">GitHub</p>
+                        <p class="text-xs text-slate-500">@BoyBennett</p>
                     </div>
                 </a>
 
                 <a href="mailto:benejikeme01@gmail.com?subject=Request%20to%20work%20with%20you"
-                   class="flex items-center gap-4 bg-gray-200 border-2 border-gray-300 rounded-2xl p-5 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-300 group shadow-sm hover:shadow-md">
-                    <i class="fa-solid fa-envelope text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                   class="flex items-center gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4 hover:bg-red-500/10 hover:border-red-500/40 transition-all duration-200 group cursor-pointer">
+                    <div class="w-10 h-10 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/20 transition-colors duration-200">
+                        <i class="fa-solid fa-envelope text-red-400 text-lg"></i>
+                    </div>
                     <div>
-                        <p class="font-semibold">Email</p>
-                        <p class="text-sm text-gray-500 group-hover:text-red-100 transition-colors">benejikeme01@gmail.com</p>
+                        <p class="font-semibold text-slate-200 text-sm">Email</p>
+                        <p class="text-xs text-slate-500 group-hover:text-slate-400 transition-colors">benejikeme01@gmail.com</p>
                     </div>
                 </a>
 
                 <a href="https://x.com/Bennett30_" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-4 bg-gray-200 border-2 border-gray-300 rounded-2xl p-5 hover:bg-black hover:text-white hover:border-black transition-all duration-300 group shadow-sm hover:shadow-md">
-                    <i class="fa-brands fa-x-twitter text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                   class="flex items-center gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4 hover:bg-slate-800 hover:border-slate-500 transition-all duration-200 group cursor-pointer">
+                    <div class="w-10 h-10 bg-slate-700 group-hover:bg-slate-600 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-200">
+                        <i class="fa-brands fa-x-twitter text-slate-300 text-lg"></i>
+                    </div>
                     <div>
-                        <p class="font-semibold">Twitter / X</p>
-                        <p class="text-sm text-gray-500 group-hover:text-gray-300 transition-colors">@Bennett30_</p>
+                        <p class="font-semibold text-slate-200 text-sm">Twitter / X</p>
+                        <p class="text-xs text-slate-500">@Bennett30_</p>
                     </div>
                 </a>
 
                 <a href="https://wa.me/2348168084937" target="_blank" rel="noopener noreferrer"
-                   class="flex items-center gap-4 bg-gray-200 border-2 border-gray-300 rounded-2xl p-5 hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-300 group shadow-sm hover:shadow-md">
-                    <i class="fa-brands fa-whatsapp text-3xl group-hover:scale-110 transition-transform duration-300"></i>
+                   class="flex items-center gap-4 bg-slate-800/60 border border-slate-700 rounded-xl p-4 hover:bg-green-500/10 hover:border-green-500/40 transition-all duration-200 group cursor-pointer">
+                    <div class="w-10 h-10 bg-green-500/10 border border-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-green-500/20 transition-colors duration-200">
+                        <i class="fa-brands fa-whatsapp text-green-400 text-lg"></i>
+                    </div>
                     <div>
-                        <p class="font-semibold">WhatsApp</p>
-                        <p class="text-sm text-gray-500 group-hover:text-green-100 transition-colors">+234 816 808 4937</p>
+                        <p class="font-semibold text-slate-200 text-sm">WhatsApp</p>
+                        <p class="text-xs text-slate-500">+234 816 808 4937</p>
                     </div>
                 </a>
 
@@ -111,8 +116,11 @@
         </div>
     </main>
 
-    <footer class="w-full bg-gray-100 py-4 border-t-4 border-gray-300">
-        <p class="pl-4 md:pl-16 text-lg text-gray-600">2026 &copy; All Rights Reserved.</p>
+    <footer class="w-full py-5 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 flex flex-col md:flex-row justify-between items-center gap-2">
+            <p class="text-slate-600 text-sm">2026 &copy; Chukwuemeka Ejikeme. All Rights Reserved.</p>
+            <p class="text-slate-700 text-xs">Built with Go &amp; Tailwind CSS</p>
+        </div>
     </footer>
 
     <script>
